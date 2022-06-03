@@ -35,9 +35,9 @@
             align-items: center;
             justify-content: center;
             /* transition: .3s; */
-            /* animation: nombre tiempo; */
-            animation-name: cuadrado;
-            animation-duration: 2s;
+            /* animation: tiene nombre y tiempo; */
+            animation-name: cuadrado, rebote;
+            animation-duration: 3s, .3s;
             /* En cuanto tiempo empieza la animacion */
             /* animation-delay: 1s; */
             /* numero de veces que se va a repetir la animación */
@@ -51,7 +51,6 @@
             animation-direction: alternate;
             /* como se va a ver el elemento cuando termine la animacion */
             /*animation-fill-mode: forwards;como termina la animacion*/
-            position: relative;
             /*genera un inicio mas suave*/
             /* animation-timing-function: ease-in; */
             /* lento al inicio y al final */
@@ -59,7 +58,10 @@
             /* animacion por pasos fps */
             /* animation-timing-function: steps(5); */
             /* animacion fluida al gusto */
-            animation-timing-function: cubic-bezier(1, 1, 1, 1);
+            /* animation-timing-function: cubic-bezier(1, 1, 1, 1); */
+            /* mejorar el rebote */
+            animation-timing-function: linear, ease-in-out;
+            position: relative;
         }
         @keyframes cuadrado {
             0%{
@@ -71,9 +73,17 @@
                 left: calc(100% - 220px);
             }
         }
+        @keyframes rebote {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(100px) scale(1, .8);
+            }
+        }
     </style>
 
-    <title>Animaciones Sintaxis</title>
+    <title>Animaciones Multiples</title>
 
 </head>
 
