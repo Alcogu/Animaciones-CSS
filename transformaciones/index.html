@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Transformaciones</title>
+    
+    <style>
+        body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .pelota{
+            width: 100px;
+            height: 100px;
+            /* para que sea circular */
+            border-radius: 50%;
+            /* que propiedad se quiere cambiar en la transicion */
+            /* transition-property: width, height; */
+            /* transition-duration: 1s; */
+            /* TIempo de espera de interaccion para la reaccion */
+            /* transition-delay: 1s; */
+            /* Aceleración de transicion, ease es la predeterminada */
+            /* transition-timing-function: ease; */
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .pelota.a{
+            background: red;
+            left: 0;
+        }
+
+        .pelota.b{
+            background: blue;
+            right: 0;
+        }
+
+        .canasta{
+            border: 1px solid black;
+            position: relative;
+            height: 100px;
+            width: 100%;
+            /* propiedades de transform = rotar, sesgar, posicion, tamaño */
+            transform: rotate(5deg) skew(10deg) translate(100px) scale(1.5);
+        }
+
+        .canasta:hover .pelota.a{
+            left: calc(50% - 100px);
+        }
+
+        .canasta:hover .pelota.b{
+            right: calc(50% - 100px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="canasta">
+        <div class="pelota a">Hola</div>
+        <div class="pelota b">Holilla</div>
+    </div>
+
+</body>
+
+</html>

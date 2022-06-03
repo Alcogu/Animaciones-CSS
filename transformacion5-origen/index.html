@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial;
+        }
+        .container{
+            border: 1px solid red;
+        }
+        .container:hover .cuadrado{
+            /* transform-origin: x y; */
+            /* por defecto transform-origin: 50% 50%; */
+            /* transform-origin: left; */
+            /* transform-origin: top left; */
+            transform-origin: 0% 50%;
+            /* transform: rotate(45deg); */
+            /* transform: rotate(-45deg); */
+            /* transform: rotateX(45deg); */
+            transform: rotateY(45deg);
+            /* transform: rotateZ(45deg); */
+            /* transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg); */
+        }
+        .cuadrado{
+            width: 200px;
+            height: 200px;
+            background: #7dc900;
+            margin: 20px;
+            transition: .3s;
+        }
+    </style>
+
+    <title>Transformación Origen</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cuadrado">
+            Holiii
+        </div>
+    </div>
+     
+</body>
+
+</html>

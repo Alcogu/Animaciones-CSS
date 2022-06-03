@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial;
+        }
+        .container{
+            border: 1px solid red;
+        }
+        .container:hover .cuadrado{
+
+        }
+        .cuadrado{
+            width: 200px;
+            height: 200px;
+            background: #7dc900;
+            margin: 20px;
+            /* transition: .3s; */
+            /* animation: nombre tiempo; */
+            animation-name: cuadrado;
+            animation-duration: 1s;
+            /* En cuanto tiempo empieza la animacion */
+            /* animation-delay: 1s; */
+            /* numero de veces que se va a repetir la animación */
+            animation-iteration-count: 2;
+        }
+        @keyframes cuadrado {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <title>Animaciones Sintaxis</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cuadrado">
+            Holiii
+        </div>
+    </div>
+     
+</body>
+
+</html>
